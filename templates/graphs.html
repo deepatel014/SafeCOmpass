@@ -1,0 +1,143 @@
+    <!--===========HEAD=========-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <link rel="icon" href="images\logo.png" type="image/jpg">
+    <!-- bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+    <!--===========BODY==============-->
+    <body>
+        <link rel="stylesheet" href="{{ url_for('static', filename='graphs.css') }}">
+        <header  class="header">
+            <div class="row">
+                <div class="col-xl-6 col-6 p-4 ps-5 d-flex align-items-center">
+                    <a href="{{ url_for('index') }}"><img src="{{ url_for('static', filename='images/logo.png') }}" class="img-fluid rounded-circle"
+                    style="max-width:11%;"> </a>
+                </div>
+                <div class="col-6 col-xl-6 d-flex flex-row-reverse d-flex align-items-center">
+                    <nav class="navbar navbar-expand-lg navbar-light">
+                        <div class="container-fluid text-white mx-auto">
+                          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                          </button>
+                          <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0 ml-auto d-flex align-items-center">
+                                 <li class="nav-item" >
+                                    <a class="nav-link px-4" aria-current="page" href="{{ url_for('riskmeter') }}" id="headings">RISK-O-METER</a>
+                                 </li>
+                                 <li class="nav-item">
+                                     <a class="nav-link px-4" href="{{ url_for('map') }}" id="headings">SAFENAV</a>
+                                 </li>
+                                 <li class="nav-item">
+                                     <a class="nav-link px-4" href="{{ url_for('graphs') }}" id="headings">SAFEGRAPH</a>
+                                 </li>
+                                 <li class="nav-item"><S></S>
+                                     <a class="nav-link px-4" href="{{ url_for('squad') }}" id="headings">SQUAD</a>
+                                 </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </nav>
+                </div>
+            </div>        
+        </header>
+        <!--=============GRAPHS LIST=======================-->
+        
+        <section class="Graphs">
+            <div class="container">
+                <h2 class="text-center display-5 pt-3">GRAPHS</h2>
+            <div class="row p-4 ps-5">
+                <div class="col-xl-4 p-4">
+                        <div class="card mt-3" style="width: 20rem;height: 20rem;">
+                            <img src="/images/plot01.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">PLOT 1</h5>
+                                <p class="card-text">District VS Count</p>
+                            </div>
+                        </div>     
+                </div>
+                <div class="col-xl-4 p-4">
+                        <div class="card mt-3" style="width: 20rem;height: 20rem;" >
+                            <img src="images/plot02.png" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">PLOT 2</h5>
+                                    <p class="card-text">Road Class VS Count</p> 
+                                </div>
+                        </div> 
+                </div>
+                <div class="col-xl-4 p-4">
+                        <div class="card mt-3" style="width: 20rem;height: 20rem">
+                            <img src="images/plot03.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">PLOT 3</h5>
+                                <p class="card-text">Location</p>
+                            </div>
+                        </div> 
+                </div>
+                <div class="col-xl-4 p-4">
+                    <div class="card mt-3" style="width: 20rem;height: 20rem">
+                        <img src="images/plot04.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">PLOT 4</h5>
+                            <p class="card-text">Year VS Count</p>
+                        </div>
+                    </div> 
+                </div>
+                <div class="col-xl-4 p-4">
+                    <div class="card mt-3" style="width: 20rem;height: 20rem">
+                        <img src="images/plot05.png" class="card-img-top"  alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">PLOT 5</h5>
+                            <p class="card-text">Seasons VS Count</p>
+                        </div>
+                    </div> 
+                </div>
+                <div class="col-xl-4 p-4">
+                    <div class="card mt-3" style="width: 20rem;height: 20rem">
+                        <img src="images/plot06.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">PLOT 6</h5>
+                            <p class="card-text">Age VS Count</p>
+                        </div>
+                    </div> 
+                </div>
+                <div class="col-xl-4 p-4">
+                    <div class="card mt-3" style="width: 20rem;height: 20rem">
+                        <img src="images/plot07.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">PLOT 7</h5>
+                            <p class="card-text">Categories VS Count</p>
+                        </div>
+                    </div> 
+                </div>
+                <div class="col-xl-4 p-4">
+                    <div class="card mt-3" style="width: 20rem;height: 20rem">
+                        <img src="images/plot08.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">PLOT 8</h5>
+                            <p class="card-text">Type VS Count</p>
+                        </div>
+                    </div> 
+                </div>
+                <div class="col-xl-4 p-4">
+                    <div class="card mt-3" style="width: 20rem;height: 20rem">
+                        <img src="images/plot09.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">PLOT 9</h5>
+                            <p class="card-text">Timeline VS Count</p>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+            </div>  
+        </section>
+    </body>
+    </html>

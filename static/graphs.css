@@ -1,0 +1,43 @@
+.skills{
+    background:linear-gradient(180deg,black,#333333,#555555);
+    padding-top: 15px;
+}
+
+#a{
+    align-items: center;
+}
+
+.card mt-3{
+    width: 18rem; height: 22rem;
+
+}
+
+.container{
+    padding-top: 0;
+}
+
+.container .text-center{
+    text-align: center;
+    font: weight 10px;
+    color:black
+}
+
+.card-img-top {
+    width: 20rem;
+    height: 10vw;
+    object-fit: cover;
+}
+
+.footer{
+    position: relative;
+    margin-top: 45px;
+    height: 100px;
+    clear:both;
+    padding-top:10px;
+    color: white;
+    background-color: black;
+}
+
+#logofooter{
+    color:white
+}

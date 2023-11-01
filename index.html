@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Accident Prediction</title>
+</head>
+<body>
+   
+    </py-script>
+    <h1>Accident Prediction</h1>
+    <form method="POST" ">
+        <label for="AG_DRIV">AG_DRIV:</label>
+        <select name="AG_DRIV" required>
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+        </select>
+        <br><br>
+        
+        <label for="ALCOHOL">ALCOHOL:</label>
+        <select name="ALCOHOL" required>
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+        </select><br><br>
+        
+        <label for="AUTOMOBILE">AUTOMOBILE:</label>
+        <select name="AUTOMOBILE" required>
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+        </select><br><br>
+        
+        <label for="CYCLIST">CYCLIST:</label>
+        <select name="CYCLIST" required>
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+        </select><br><br>
+       
+        
+        <label for="DISTRICT">DISTRICT:</label>
+        <select name="DISTRICT" required>
+            {% for value in selections['DISTRICT'] %}
+                <option value="{{ value }}" {% if form_data and form_data['DISTRICT'] == value %}selected{% endif %}>{{ value }}</option>
+            {% endfor %}
+        </select><br><br>
+
+        <label for="HOOD_158">HOOD_158:</label>
+        <select name="HOOD_158" required>
+            {% for value, label in neighborhood_options.items() %}
+            <option value="{{ value }}">{{value}}:{{ label }}</option>
+        {% endfor %}
+        </select><br><br>
+        
+        <label for="LIGHT">LIGHT:</label>
+        <select name="LIGHT" required>
+            {% for value in selections['lights'] %}
+            <option value="{{ value }}">{{ value }}</option>
+        {% endfor %}
+        </select><br><br>
+        
+        <label for="LOCCOORD">LOCCOORD:</label>
+        <select name="LOCCOORD" required>
+            {% for value in selections['LOCCOORD'] %}
+            <option value="{{ value }}">{{ value }}</option>
+        {% endfor %}
+        </select><br><br>
+        
+        <label for="PEDESTRIAN">PEDESTRIAN:</label>
+        <select name="PEDESTRIAN" required>
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+        </select><br><br>
+        
+        <label for="RDSFCOND">RDSFCOND:</label>
+        <select name="RDSFCOND" required>
+            {% for value in selections['RDSFCOND'] %}
+            <option value="{{ value }}">{{ value }}</option>
+        {% endfor %}
+        </select>
+        <br><br>
+        
+        <label for="SEASON">SEASON:</label>
+        <select name="SEASON" required>
+            {% for value in selections['SEASON'] %}
+            <option value="{{ value }}">{{ value }}</option>
+        {% endfor %}
+        </select>
+        <br><br>
+        
+        <label for="SPEEDING">SPEEDING:</label>
+        <select name="SPEEDING" required>
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+        </select><br><br>
+        
+        <label for="TRSN_CITY_VEH">TRSN_CITY_VEH:</label>
+        <select name="TRSN_CITY_VEH" required>
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+        </select><br><br>
+        
+        <label for="TRUCK">TRUCK:</label>
+        <select name="TRUCK" required>
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+        </select><br><br>
+        
+        <label for="VISIBILITY">VISIBILITY:</label>
+        <select name="VISIBILITY" required>
+            {% for value in selections['VISIBILITY'] %}
+            <option value="{{ value }}">{{ value }}</option>
+        {% endfor %}
+        </select>
+        <br><br>
+        <label for="model">Select Model:</label>
+<select name="model" required>
+    {% for key, value in model_paths.items() %}
+        <option value="{{ key }}" {% if form_data and form_data['model'] == key %}selected{% endif %}>{{ key }}</option>
+    {% endfor %}
+</select>
+        
+        <button type="submit">Predict</button>
+    </form>
+    
+    {% if predicted_label %}
+    <h2>Predicted Label: {{ predicted_label }}</h2>
+    {% endif %}
+</body>
+</html>

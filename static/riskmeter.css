@@ -1,0 +1,118 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.image {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.845);
+  letter-spacing: 5px;
+  font-size: 7.5rem;
+  background-position: center;
+  background-size: cover;
+  background-image: linear-gradient(270deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                    url("/static/images/risk_night.jpeg");
+}
+
+.image-container{
+    padding-right: 30%;
+    margin-left: 20%;
+    padding-top:10%
+}
+
+#icons{
+    padding-right: 1%;
+    margin-left: -15%;
+    word-spacing: 15px;
+    margin: 10%;
+    padding: 7%;
+}
+#a{
+    color: rgba(255, 255, 255, 0.845);
+}
+
+.vertical_dotted_line
+{
+    border-left: 1px dotted white;
+    height: 100px;
+    padding: 0;
+    margin: 0;
+} 
+
+.header{
+    background-color: transparent; 
+    position: fixed; 
+    width: 100%; 
+    z-index: 1;
+}
+
+#headings{
+    color:white;
+}
+
+.d-none {
+    display: none !important;
+  }
+  
+  #startBtn {
+    animation: fadeInUp 1s ease-in-out;
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  #questionsContainer {
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+}
+
+.btn-primary {
+    background-color: #007bff; /* Original blue color */
+    border-color: #007bff;
+    transition: background-color 0.3s, box-shadow 0.3s; /* Add transitions for smooth color change */
+}
+
+.btn-primary:hover {
+    background-color: #39b54a; /* Neo green color */
+    border-color: #39b54a;
+    box-shadow: 0 0 20px #39b54a, 0 0 40px #39b54a, 0 0 60px #39b54a; /* Glowing effect */
+}
+
+/* Add this to your existing CSS or a new CSS file */
+.car-animation {
+  position: relative;
+  width: 100px; /* Adjust the width as needed */
+  height: 100px; /* Adjust the height as needed */
+  animation: moveCar 3s linear infinite; /* Adjust animation duration and timing */
+}
+
+@keyframes moveCar {
+  0% {
+      transform: translateX(-100%);
+  }
+  100% {
+      transform: translateX(100%);
+  }
+}
